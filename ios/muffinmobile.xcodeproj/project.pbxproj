@@ -440,10 +440,12 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = ACPGVPPM2P;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 25E3W2MY8J;
+						DevelopmentTeam = ACPGVPPM2P;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -729,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ACPGVPPM2P;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -746,6 +749,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = ACPGVPPM2P;
 				INFOPLIST_FILE = muffinmobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -758,10 +762,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Chao (DVH8A7RKPK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Chao (DVH8A7RKPK)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 25E3W2MY8J;
+				DEVELOPMENT_TEAM = ACPGVPPM2P;
 				INFOPLIST_FILE = muffinmobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -769,8 +774,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.danielchao.muffinmoble;
+				PRODUCT_BUNDLE_IDENTIFIER = me.danielchao.muffinmobile;
 				PRODUCT_NAME = muffinmobile;
+				PROVISIONING_PROFILE = "ea74eb16-4436-436b-a6c3-95471b49ae6d";
+				PROVISIONING_PROFILE_SPECIFIER = "AT Muffin Dev iPhone Provisioning Profile";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -779,9 +786,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Chao (DVH8A7RKPK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Chao (DVH8A7RKPK)";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25E3W2MY8J;
+				DEVELOPMENT_TEAM = ACPGVPPM2P;
 				INFOPLIST_FILE = muffinmobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -789,8 +797,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.danielchao.muffinmoble;
+				PRODUCT_BUNDLE_IDENTIFIER = me.danielchao.muffinmobile;
 				PRODUCT_NAME = muffinmobile;
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
