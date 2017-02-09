@@ -9,7 +9,6 @@ registerScreens();
 class App extends Component {
     constructor(props) {
         super(props);
-        //this.startApp();
         iconsLoaded.then(() => {
             this.startApp();
         });
