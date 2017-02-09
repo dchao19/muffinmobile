@@ -25,6 +25,9 @@ class App extends Component {
                     title: 'Home',
                 },
             ],
+            tabsStyle: {
+                tabBarBackgroundColor: "#99d3e5"
+            },
         });
     }
 };
