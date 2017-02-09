@@ -16,11 +16,12 @@ const iconsLoaded = new Promise((resolve, reject) => {
 	new Promise.all(
 		Object.keys(icons).map((iconName) =>
 		// IconName--suffix--other-suffix is just the mapping name in iconsMap
-		Ionicons.getImageSource(
-		iconName.replace(replaceSuffixPattern, ''),
-		icons[iconName][0],
-		icons[iconName][1]
-		))
+			Ionicons.getImageSource(
+				iconName.replace(replaceSuffixPattern, ''),
+				icons[iconName][0],
+				icons[iconName][1]
+			)
+		)
 	).then((sources) => {
 		Object.keys(icons)
 		.forEach((iconName, idx) => (iconsMap[iconName] = sources[idx]));

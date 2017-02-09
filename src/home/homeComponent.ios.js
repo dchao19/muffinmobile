@@ -4,12 +4,14 @@ import {
     Text,
 } from 'react-native';
 
-let Home = (props) => {
-    return (
-        <View>
-            <Text>Hello!</Text>
-        </View>
-    );
-};
+class Home extends React.Component {
+    render() {
+        return (
+            <View>
+                <Text>Hello!</Text>
+            </View>
+        );
+    }
+}
 
 export default Home;

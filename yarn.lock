@@ -2865,13 +2865,13 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
-
 lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
+  version "4.17.2"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
 longest@^1.0.1:
   version "1.0.1"
@@ -3482,11 +3482,15 @@ react-native:
     xmldoc "^0.4.0"
     yargs "^6.4.0"
 
-react-native-navigation@next:
-  version "2.0.0-experimental.192"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.0.0-experimental.192.tgz#24511ced94583ca901e17cd4d99a6c5d9060105c"
+react-native-controllers@^2.0.0:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-controllers/-/react-native-controllers-2.1.4.tgz#e944857f0b8fe81029f7f6556fe7b6c1b6062911"
+
+react-native-navigation@^1.0.30:
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.0.30.tgz#8e47a58f4b8a7256d912d2efe64bea78a900650e"
   dependencies:
-    lodash "4.x.x"
+    react-native-controllers "^2.0.0"
   optionalDependencies:
     react-redux "*"
 
