@@ -7,8 +7,26 @@ const icons = {
 	'ios-home': [30, AppColors.black],
 	'ios-home--big': [50, AppColors.black],
 
-	'ios-person--active': [30, AppColors.appPrimary],
-	'ios-person--active--big': [50, AppColors.appPrimary],
+	'ios-home-outline': [30, AppColors.white],
+	'ios-home-outline--big': [30, AppColors.white],
+
+	'ios-clock': [30, AppColors.white],
+	'ios-clock--big': [50, AppColors.white],
+
+	'ios-clock-outline': [30, AppColors.white],
+	'ios-clock-outline--big': [50, AppColors.white],
+
+	'ios-add-circle': [30, AppColors.white],
+	'ios-add-circle--big': [50, AppColors.white],
+
+	'ios-add-circle-outline': [30, AppColors.white],
+	'ios-add-circle-outline--big': [50, AppColors.white],
+
+	'ios-settings': [30, AppColors.white],
+	'ios-settings--big': [50, AppColors.white],
+
+	'ios-settings-outline': [30, AppColors.white],
+	'ios-settings-outline--big': [50, AppColors.white],
 };
 
 const iconsMap = {};

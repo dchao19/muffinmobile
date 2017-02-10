@@ -1,0 +1,1 @@
+export const APP_ROOT_CHANGE = 'APP_ROOT_CHANGE';
