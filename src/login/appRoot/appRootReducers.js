@@ -3,19 +3,15 @@ import {
 } from './appRootActionTypes';
 
 function appRoot(state = {
-    newRoot: 'login',
+    newRoot: 'waiting',
 }, action) {
     switch (action.type) {
-    case APP_ROOT_CHANGE: {
+    case APP_ROOT_CHANGE:
         return Object.assign({}, state, {
             newRoot: action.newRoot,
         });
-    }
-    default: {
-        return Object.assign({}, state, {
-            newRoot: 'login',
-        });
-    }
+    default:
+        return state;
     }
 }
 

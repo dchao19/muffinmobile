@@ -4,28 +4,22 @@ import {
 } from './homeActionTypes';
 
 function currentBalance(state = {
-    currentBalance: 0.0,
-    fetching: false,
+    currentBalance: 0,
+    fetched: false,
 }, action) {
     switch (action.type) {
-    case RECEIVE_CURRENT_BALANCE: {
+    case RECEIVE_CURRENT_BALANCE:
         return Object.assign({}, state, {
-            fetching: false,
+            fetched: true,
             currentBalance: action.data.currentBalance,
         });
-    }
-    case RETRIEVE_CURRENT_BALANCE: {
+    case RETRIEVE_CURRENT_BALANCE:
         return Object.assign({}, state, {
-            fetching: true,
-            currentBalance: 0.0,
+            fetched: false,
+            currentBalance: 0,
         });
-    }
-    default: {
-        return Object.assign({}, state, {
-            fetching: false,
-            currentBalance: 0.0,
-        });
-    }
+    default:
+        return state;
     }
 }
 

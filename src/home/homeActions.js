@@ -1,40 +1,41 @@
 import {
     RECEIVE_CURRENT_BALANCE,
     RETRIEVE_CURRENT_BALANCE,
+    GET_CURRENT_BALANCE,
+    ERROR_CURRENT_BALANCE,
 } from './homeActionTypes';
-
-import {CURRENT_BALANCE} from '../utils/AppURLS';
 
 // TODO Error handling
 
-function receiveCurrentBalance(newData) {
+export function receiveCurrentBalance(newData) {
     return {
         type: RECEIVE_CURRENT_BALANCE,
-        fetching: false,
+        fetched: true,
         data: {
             currentBalance: newData.currentBalance,
         },
     };
 }
 
-function retrieveCurrentBalance() {
+export function retrieveCurrentBalance() {
     return {
         type: RETRIEVE_CURRENT_BALANCE,
-        fetching: true,
+        fetched: false,
+    };
+}
+
+export function errorCurrentBalance(err) {
+    let {errMessage, errCode} = err;
+    return {
+        type: ERROR_CURRENT_BALANCE,
+        fetched: true,
+        errMessage,
+        errCode,
     };
 }
 
 export function getCurrentBalance() {
-    return function(dispatch) {
-        dispatch(retrieveCurrentBalance());
-        fetch(CURRENT_BALANCE, {
-            mode: 'cors',
-            headers: {
-                Authorization: `Bearer ${Token}`,
-            },
-        }).then((response) => response.json())
-        .then((responseJson) => {
-            dispatch(receiveCurrentBalance(responseJson));
-        });
+    return {
+        type: GET_CURRENT_BALANCE,
     };
 }

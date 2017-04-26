@@ -12,15 +12,22 @@ import {getCurrentBalance} from './homeActions';
 const mapDispatchToProps = (dispatch) => {
     return {
         getBalance: () => {
-            dispatch(getCurrentBalance());
+            return dispatch(getCurrentBalance());
         },
+        // getBalance: (idToken) => {
+        //     return dispatch(getCurrentBalance(idToken));
+        // },
+        // retrieveBalance: (data) => {
+        //     return dispatch(receiveCurrentBalance(data));
+        // },
     };
 };
 
 const mapStateToProps = (state) => {
     return {
         data: {
-            fetching: state.home.fetching,
+            idToken: state.userLogin.idToken,
+            fetched: state.home.fetched,
             currentBalance: state.home.currentBalance,
         },
     };
@@ -31,12 +38,20 @@ class Home extends Component {
         navBarHidden: true,
     };
     static propTypes = {
-        getBalance: T.func.isRequired,
         data: T.shape({
-            fetching: T.bool.isRequired,
+            idToken: T.string,
+            fetched: T.bool.isRequired,
             currentBalance: T.number,
         }),
+        getBalance: T.func.isRequired,
     };
+
+    componentDidMount() {
+        if (!this.props.data.fetched) {
+            this.props.getBalance();
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -45,7 +60,9 @@ class Home extends Component {
                     style={styles.muffinLogo}
                     source={require('../images/homeMuffinInvert.png')}/>
                 <Text style={styles.helpText}>tap to pay</Text>
-                <Text style={styles.balanceText}>$15.94</Text>
+                <Text style={styles.balanceText}>
+                    ${this.props.data.currentBalance
+                }</Text>
             </View>
         );
     }

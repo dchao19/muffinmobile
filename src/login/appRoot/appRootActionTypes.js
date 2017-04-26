@@ -1,1 +1,2 @@
 export const APP_ROOT_CHANGE = 'APP_ROOT_CHANGE';
+export const APP_INITIALIZED = 'APP_INITIALIZED';
